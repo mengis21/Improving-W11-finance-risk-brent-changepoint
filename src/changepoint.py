@@ -4,10 +4,8 @@ from dataclasses import dataclass
 from datetime import date
 from typing import Any
 
-import arviz as az
 import numpy as np
 import pandas as pd
-import pymc as pm
 
 
 @dataclass(frozen=True)
@@ -31,7 +29,7 @@ def fit_single_changepoint_normal(
     chains: int = 2,
     target_accept: float = 0.9,
     random_seed: int = 42,
-) -> az.InferenceData:
+) -> Any:
     """Single change point model with mean+sigma shift.
 
     Model:
@@ -44,6 +42,8 @@ def fit_single_changepoint_normal(
       - `y` should be roughly standardized (e.g., returns or standardized log-price).
       - We allow sigma to shift because returns often show volatility regime changes.
     """
+
+    import pymc as pm
 
     y = np.asarray(y, dtype=float)
     if y.ndim != 1:
@@ -80,7 +80,9 @@ def fit_single_changepoint_normal(
     return idata
 
 
-def summarize_tau(idata: az.InferenceData) -> tuple[int, tuple[int, int]]:
+def summarize_tau(idata: Any) -> tuple[int, tuple[int, int]]:
+    import arviz as az
+
     tau_samples = idata.posterior["tau"].values.reshape(-1)
     tau_median = int(np.median(tau_samples))
     hdi = az.hdi(tau_samples, hdi_prob=0.94)
@@ -89,7 +91,7 @@ def summarize_tau(idata: az.InferenceData) -> tuple[int, tuple[int, int]]:
 
 
 def build_summary(
-    idata: az.InferenceData,
+    idata: Any,
     *,
     dates: pd.Series | list[pd.Timestamp] | np.ndarray,
 ) -> ChangePointSummary:
