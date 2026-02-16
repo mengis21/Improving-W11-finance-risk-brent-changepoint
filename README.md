@@ -1,45 +1,40 @@
-# Change Point Analysis and Statistical Modeling (Brent Oil)
+# Brent Oil Regime Shift Risk Analytics (Week 12 Capstone Improvement)
 
-This repository contains a Week 11 project analyzing how major geopolitical/economic events relate to structural breaks (change points) in Brent oil prices.
+![CI](https://github.com/mengis21/Improving-W11-finance-risk-brent-changepoint/actions/workflows/ci.yml/badge.svg)
 
-## Project structure
+Production-grade Bayesian change-point analytics for Brent oil prices with event attribution, tested APIs, and an interactive dashboard for finance risk decision support.
 
-- `data/raw/` – raw data (Brent oil prices + curated events)
-- `notebooks/` – EDA + Bayesian change point notebooks
-- `src/` – reusable Python utilities
-- `models/` – exported model outputs (JSON/CSV)
-- `reports/figures/` – figures used for interpretation/dashboard
+## Business Problem
 
-## Quick start
+Risk teams and analysts need timely detection of market regime shifts to avoid delayed responses in hedging, forecasting, and exposure management. Brent oil prices react to geopolitical and policy shocks, but change points are often identified late or inconsistently. This project provides a transparent, repeatable workflow that detects likely structural breaks and links them to curated market events.
 
-1) Create an environment and install dependencies:
+## Solution Overview
+
+- Build cleaned daily Brent price and event datasets.
+- Transform prices into log returns for stationarity-aware modeling.
+- Fit a Bayesian single change-point model (mean and volatility shift).
+- Expose results through API endpoints and an interactive dashboard.
+- Add automated tests and CI checks for reliability.
+
+## Key Results
+
+- Detected posterior median change point near **2018-11-15** with event alignment to 2018 sanctions context.
+- 90-day mean price window changed by approximately **-18.74%** around the inferred shift.
+- Automated quality gates: **10 passing tests** with CI execution on push/PR.
+
+## Quick Start
 
 ```bash
+git clone https://github.com/mengis21/Improving-W11-finance-risk-brent-changepoint.git
+cd Improving-W11-finance-risk-brent-changepoint
 python -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
-```
-
-2) Open and run notebooks in `notebooks/`.
-
-## Dashboard (Task 3)
-
-The dashboard lives under `dashboard/`:
-
-### Backend (Flask)
-
-```bash
-source .venv/bin/activate
+pytest -q
 python dashboard/backend/app.py
 ```
 
-API endpoints:
-- `/api/health`
-- `/api/prices?start=YYYY-MM-DD&end=YYYY-MM-DD`
-- `/api/events`
-- `/api/changepoint`
-
-### Frontend (React + Vite)
+In another terminal:
 
 ```bash
 cd dashboard/frontend
@@ -47,4 +42,42 @@ npm install
 npm run dev
 ```
 
-Optional: set `VITE_API_BASE` (defaults to `http://localhost:8000`).
+## Project Structure
+
+```
+.
+├─ data/
+│  ├─ raw/
+│  └─ processed/
+├─ models/
+├─ notebooks/
+├─ src/
+├─ tests/
+├─ dashboard/
+│  ├─ backend/
+│  └─ frontend/
+└─ .github/workflows/
+```
+
+## Demo
+
+- Local dashboard: run Flask backend + Vite frontend and open the URL printed by Vite.
+- Suggested screenshots for submission: dashboard overview, filtered view, event/changepoint context.
+
+## Technical Details
+
+- **Data:** Brent daily prices and curated geopolitical/policy event data.
+- **Model:** Bayesian single change point on standardized log returns with pre/post mean and volatility parameters.
+- **Evaluation:** posterior summaries, nearest-event mapping, and reproducible test/CI checks.
+
+## Future Improvements
+
+- Extend to multiple change points and robust/heavy-tailed likelihoods.
+- Add uncertainty bands directly in dashboard views.
+- Add performance profiling and endpoint latency benchmarks.
+
+## Author
+
+- Kidus Gebremedhin
+- LinkedIn: add your profile URL
+- Email: kidusgebremedhin.sch@gmail.com
