@@ -1,0 +1,31 @@
+{
+  "tau_index_median": 1526,
+  "tau_index_hdi_94": [
+    1514,
+    1538
+  ],
+  "tau_date_median": "2018-11-15",
+  "tau_date_hdi_94": [
+    "2018-10-30",
+    "2018-12-03"
+  ],
+  "mu_before_mean": -0.008571311030504212,
+  "mu_after_mean": 0.013742202364248233,
+  "sigma_before_mean": 0.6412532856382038,
+  "sigma_after_mean": 1.3749199018220506,
+  "prob_mu_after_gt_before": 0.6895,
+  "nearest_event": {
+    "event_date": "2018-11-05",
+    "event_title": "US re-imposes sanctions on Iran oil exports",
+    "event_type": "Sanctions",
+    "region": "US/Iran",
+    "notes": "Second round of sanctions targets Iran energy exports and shipping",
+    "abs_days": 10
+  },
+  "impact_stats_usd": {
+    "window_days": 90,
+    "pre_mean_price_usd": 75.84055555555555,
+    "post_mean_price_usd": 61.62800000000001,
+    "pct_change_mean_price": -18.74004673547573
+  }
+}

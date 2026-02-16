@@ -1,0 +1,14 @@
+pandas>=2.1
+numpy>=1.26
+matplotlib>=3.8
+seaborn>=0.13
+statsmodels>=0.14
+pymc>=5.10
+arviz>=0.16
+pytensor>=2.18
+scipy>=1.11
+fastapi>=0.110
+uvicorn>=0.27
+flask>=3.0
+flask-cors>=4.0
+plotly>=5.18

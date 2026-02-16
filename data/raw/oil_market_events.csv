@@ -1,0 +1,17 @@
+event_date,event_title,event_type,region,notes,date_accuracy
+2011-02-15,Arab Spring unrest escalates,Geopolitical,Middle East & North Africa,Regional instability raises supply-risk concerns,approx
+2011-02-17,Libyan civil war begins,Conflict,Libya,Libya oil production disruptions and export uncertainty,approx
+2012-01-23,EU agrees Iran oil embargo,Sanctions,Iran/EU,Sanctions tighten global supply expectations,approx
+2014-11-27,OPEC keeps output unchanged,Policy,OPEC,Decision contributes to price decline dynamics,exact
+2015-07-14,Iran nuclear deal (JCPOA) announced,Diplomacy,Iran,Expectations of future Iranian supply returning,exact
+2016-11-30,OPEC production cut agreement,Policy,OPEC,Coordinated cut supports prices and shifts expectations,exact
+2018-05-08,US announces withdrawal from JCPOA,Sanctions,US/Iran,Signals re-imposition of sanctions on Iran exports,exact
+2018-11-05,US re-imposes sanctions on Iran oil exports,Sanctions,US/Iran,Second round of sanctions targets Iran energy exports and shipping,exact
+2019-09-14,Abqaiq-Khurais attack in Saudi Arabia,Conflict,Saudi Arabia,Temporary supply shock and risk premium spike,exact
+2020-03-11,WHO declares COVID-19 pandemic,Macroeconomic,Global,Demand shock and heightened uncertainty,exact
+2020-03-08,OPEC+ negotiations break down (price war),Policy,OPEC+/Russia/Saudi Arabia,Supply surge concerns amid collapsing demand,approx
+2020-04-12,OPEC+ historic output cuts agreed,Policy,OPEC+,Large coordinated cuts to stabilize market,exact
+2021-03-23,Suez Canal blockage begins,Logistics,Global,Short-term shipping disruption and uncertainty,exact
+2022-02-24,Russia invades Ukraine,Conflict,Russia/Ukraine,Major supply-risk repricing and sanctions expectations,exact
+2022-03-08,US bans Russian oil imports,Sanctions,US/Russia,Direct import ban and broader market signaling,exact
+2022-06-03,EU agrees phased ban on Russian seaborne oil,Sanctions,EU/Russia,Reduced supply expectations and rerouting effects,approx

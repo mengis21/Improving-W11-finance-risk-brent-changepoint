@@ -1,0 +1,33 @@
+# Keep the provided "Technical challenge" folder local-only
+Technical challenge/
+
+# Local-only reports and screenshots (do not push)
+reports/*report*.md
+reports/*report*.pdf
+reports/interim_*
+reports/final_*
+reports/drafts/
+reports/screenshots/
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyd
+*.egg-info/
+.venv/
+venv/
+.env
+.ipynb_checkpoints/
+
+# OS/editor
+.DS_Store
+Thumbs.db
+__MACOSX/
+.vscode/
+
+# Node
+node_modules/
+
+# Dashboard build outputs
+dashboard/frontend/dist/
+dashboard/frontend/.vite/
