@@ -64,6 +64,12 @@ npm run dev
 - Local dashboard: run Flask backend + Vite frontend and open the URL printed by Vite.
 - Suggested screenshots for submission: dashboard overview, filtered view, event/changepoint context.
 
+## Submission Artifacts
+
+- Final report (markdown): `docs/final_submission_report.md`
+- Presentation outline: `docs/final_presentation_outline.md`
+- Final checklist: `docs/final_submission_checklist.md`
+
 ## Technical Details
 
 - **Data:** Brent daily prices and curated geopolitical/policy event data.
