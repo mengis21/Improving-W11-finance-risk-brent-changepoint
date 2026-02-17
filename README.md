@@ -64,12 +64,6 @@ npm run dev
 - Local dashboard: run Flask backend + Vite frontend and open the URL printed by Vite.
 - Suggested screenshots for submission: dashboard overview, filtered view, event/changepoint context.
 
-## Submission Artifacts
-
-- Final report (markdown): `docs/final_submission_report.md`
-- Presentation outline: `docs/final_presentation_outline.md`
-- Final checklist: `docs/final_submission_checklist.md`
-
 ## Technical Details
 
 - **Data:** Brent daily prices and curated geopolitical/policy event data.
@@ -81,9 +75,3 @@ npm run dev
 - Extend to multiple change points and robust/heavy-tailed likelihoods.
 - Add uncertainty bands directly in dashboard views.
 - Add performance profiling and endpoint latency benchmarks.
-
-## Author
-
-- Kidus Gebremedhin
-- LinkedIn: add your profile URL
-- Email: kidusgebremedhin.sch@gmail.com
